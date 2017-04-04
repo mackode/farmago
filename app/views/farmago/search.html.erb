@@ -1,0 +1,20 @@
+<h1>Farmago</h1>
+
+<%= form_tag(farmago_search_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], autofocus: true, placeholder: "Szukaj leku" %>
+  <%= submit_tag "Szukaj", :name => nil %>
+<% end %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @drugs.each do |drug| %>
+    <tr>
+      <td><%= drug.active_substance %></td>
+      <td><%= drug.drug_name %></td>
+    </tr>
+  <% end %>
+</table>

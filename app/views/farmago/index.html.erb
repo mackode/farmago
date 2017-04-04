@@ -1,0 +1,6 @@
+<h1>Farmago</h1>
+
+<%= form_tag(farmago_search_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Szukaj leku" %>
+  <%= submit_tag "Szukaj", :name => nil %>
+<% end %>

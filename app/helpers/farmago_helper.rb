@@ -1,0 +1,2 @@
+module FarmagoHelper
+end
